@@ -21,6 +21,9 @@ def inicializar_matriz(cantidad_filas: int, cantidad_columnas: int, valor_inicia
 
 # -------------- Prints
 def imprimir_menu():
+    """
+    Imprime el menu de opciones.
+    """
     print("Menú de opciones:")
     print("1 - Cargar notas de estudiantes.")
     print("2 - Mostrar estudiantes.")
@@ -60,25 +63,49 @@ def imprimir_todos_los_datos(matriz_notas:list, lista_nombres:list, lista_genero
     
 
 def imprimir_datos_alumno(lista_datos_del_alumno:list):
+    """
+    Imprime la informacion de un alumno.
+    
+    Args:
+        lista_datos_del_alumno: Lista con los datos de cada alumno.
+    """
     print(f"{'ESTUDIANTE':<11}{'|LEGAJO':<13}{'|GENERO':<13}{'|NOTAS':<65}{'|PROMEDIO'}")
     for i in range(len(lista_datos_del_alumno)):
         print(f"{lista_datos_del_alumno[i]:<11}", end="| ")
     print("")
 
 def imprimir_datos_materia(lista_notas_de_materia:list):
-    lista_cabecera = ["Notas_con_1", "Notas_con_2", "Notas_con_3", "Notas_con_4", "Notas_con_5", "Notas_con_6", "Notas_con_7", "Notas_con_8", "Notas_con_9", "Notas_con_10"]
+    """
+    Imprime la cantidad de las distintas notas de una materia.
+    
+    Args:
+        lista_notas_de_materia: Lista con la cantidad de las distintas notas.
+    """
     for i in range(len(lista_notas_de_materia)):
         print(f"Notas_con_{i+1}: {lista_notas_de_materia[i]}")
     print("")
 
 def imprimir_promedios_materias(lista_promedios_materias:list, lista_nombres_materias:list):
+    """
+    Imprime la o las materias con mayor promedio.
+    
+    Args:
+        lista_promedios_materias: Lista con los promedios de los alumnos.
+        lista_nombres_materias: Lista con los nombres de las materias.
+    """
     print("Promedios de cada materia:")
     for i in range(len(lista_promedios_materias)):
         print(f"{lista_nombres_materias[i]}:   {lista_promedios_materias[i]}")
     print("")
 
 def imprimir_materia_mayor_promedio(lista_promedios_materias:list, lista_nombres_materias:list):
-    # aplicar lo de maximos y minimos
+    """
+    Imprime la materia con mayor promedio.
+    
+    Args:
+        lista_promedios_materias: Lista con los promedios de los alumnos.
+        lista_nombres_materias: Lista con los nombres de las materias.
+    """
     
     mayor_promedio = lista_promedios_materias[0]
 
